@@ -163,29 +163,41 @@
 
 // initialising the bank app
 
-let balance = 5000
-const transaction = parseInt(prompt("What would you like to do? \n 1. Withdrawal  \n 2. Deposit \n 3. Check Balance \n 4. Transfer \n 5. Airtime \n 6. Pay Bills"));
-const pin = "1234"
+// let balance = 5000
+// const pin = "1234"
+// function bank(){
+// const transaction = parseInt(prompt("What would you like to do? \n 1. Withdrawal  \n 2. Deposit \n 3. Check Balance \n 4. Transfer \n 5. Airtime \n 6. Pay Bills"));
 
-switch (transaction) {
-  case 1:
-    alert("You have selected Withdrawal")
-    withDrawal()
-    break
-  case 2:
-    alert("You have selected Deposit")
-    deposit()
-    break
-  case 3:
-    alert("You have selected Check Balance")
-    checkBalance()
-    break
-  case 4:
-    alert("You have selected Transfer");
-    transfer();
-    break;
-  default:
-    alert("Invalid Transaction! Please select a valid transaction option.")
+
+// switch (transaction) {
+//   case 1:
+//     alert("You have selected Withdrawal")
+//     admin()
+//     withDrawal()
+//     break
+//   case 2:
+//     alert("You have selected Deposit")
+//     admin()
+//     deposit()
+//     break
+//   case 3:
+//     alert("You have selected Check Balance")
+//     checkBalance()
+//     break
+//   case 4:
+//     alert("You have selected Transfer");
+//     transfer();
+//     break;
+//   case 5:
+//     alert("You have selected Airtime");
+//     airtime();
+//     break;
+//   case 6:
+//     alert("You have selected Pay Bills");
+//     break;
+//   default:
+//     alert("Invalid Transaction! Please select a valid transaction option.")
+//   }
 
 
 
@@ -193,46 +205,169 @@ switch (transaction) {
     // if(user > balance){
     //   alert("Sorry, your account does not have enough money")
     // } 
-}
+// }
 
-function withDrawal() {
-  const password = prompt("Please enter your PIN");
-  if (password === pin) {
-    alert("Welcome to wayo bank")
-    const withdrawal = parseInt(prompt("How much do you want to redraw"));
-    if (withdrawal >= balance) {
-      alert("You have successfully withdrawn " + withdrawal + "\n Your new balance is " + (balance - withdrawal))
-    } else {
-      alert("You broke  die wrong pin")
-    }
-  } else {
-    alert("Wrong Pin! Try again")
-  }
-}
 
-function deposit() {
-  const newDeposit = parseInt(prompt("How much do you want to deposit"))
-  if (!isNaN(newDeposit)) {
-    balance += newDeposit;
+// function withDrawal() {
+//   const password = prompt("Please enter your PIN");
+//   if (password === pin) {
+//     alert("Welcome to wayo bank")
+//     const withdrawal = parseInt(prompt("How much do you want to redraw"));
+//     if (withdrawal >= balance) {
+//       alert("You have successfully withdrawn " + withdrawal + "\n Your new balance is " + (balance - withdrawal))
+//     } else {
+//       alert("You broke  die wrong pin")
+//     }
+//   } else {
+//     alert("Wrong Pin! Try again")
+//   }
+// }
+
+// function deposit() {
+//   const newDeposit = parseInt(prompt("How much do you want to deposit"))
+//   if (!isNaN(newDeposit)) {
+//     balance += newDeposit;
+    // const bank = prompt("Select your bank");
     // const sum = balance + newDeposit;
-    alert("Your current balance is " + balance + ". Thank You for Depositing")
-  } else {
-    alert("invalid  input. please enter a number")
-  }
-}
+//     alert("Your current balance is " + balance + ". Thank You for Depositing")
+//   } else {
+//     alert("invalid  input. please enter a number")
+//   }
+// }
 
-function checkBalance() {
-  alert("Your Current Balance is " + balance)
-}
+// function checkBalance() {
+//   alert("Your Current Balance is " + balance)
+// }
 
-function transfer() {
-  const supportedBanks = prompt( "Select ur bankk"["UBA", "ACCESS", "GTB"]);
-  const recipientAccountNumber = prompt("Please enter the recipient's account number:");
-  const transferAmount = parseInt(prompt("Please enter the amount you want to transfer:"));
-  if ( transferAmount <= balance) {
-    balance -= transferAmount;
-    alert("Transfer successful! You have transferred " + transferAmount +" to account number " + recipientAccountNumber + " of  "+ supportedBanks +" . Your new balance is " + balance + ".");
-  } else {
-    alert("Invalid input or insufficient balance. Please try again.");
+// function transfer() {
+//   const supportedBanks = prompt("Select ur bank");
+//   const recipientAccountNumber = prompt("Please enter the recipient's account number:");
+//   if(recipientAccountNumber.length === 10){
+//     alert("Welcome");
+//     const transferAmount = parseInt(prompt("Please enter the amount you want to transfer:"));
+//     if (transferAmount <= balance) {
+//       balance -= transferAmount;
+//       alert("Transfer successful! You have transferred " + transferAmount + " to account number " + recipientAccountNumber + " of  " + supportedBanks + ". Your new balance is " + balance + ".");
+//     } else {
+//       alert("Invalid input or insufficient balance. Please try again.");
+//     }
+//   }else{
+//     alert("Invalid input. Account number must be 10 digits. Please try again.");
+//   }
+// }
+
+//  function airtime(){
+//    const airtime = parseInt(prompt("How much airtime do you want to buy?"));
+//    if(airtime <= balance){
+//      balance -= airtime;
+//      alert("Airtime purchase successful! You have purchased " + airtime + " airtime. Your new balance is " + balance + ".");
+//    }else{
+//      alert("Invalid input or insufficient balance. Please try again.");
+//    }
+//  }
+//  function admin(){
+//   const password = prompt('Enter your password');
+//   if (password === 'admin') {
+//     alert ('Welcome admin!');
+//     }else{
+//         alert("your money no reach  here, please try again later!");
+//     }
+//  }
+
+
+
+// array
+
+// const foodItems = ["rice", "beans", "yam", "plantain", "garri", "semo", "eba", "amala", "fufu", "pounded yam"];
+// console.log(foodItems)
+// // add to an array from the end of the array using push method
+// foodItems.push("moi moi")
+// console.log(foodItems)
+// // remove from the end of the array using pop method
+// foodItems.pop()
+// console.log(foodItems)
+// // remove from the beginning of the array using shift method
+// foodItems.shift("egg")
+// console.log(foodItems)
+// // add to the beginning of the array using unshift method
+// foodItems.unshift("egg")
+// console.log(foodItems)
+
+// // create a new array from an existing array from the 1st index to the 5th index
+// const newFoodItems = foodItems.slice(0, 5)
+// console.log(newFoodItems);
+
+// // to add from the middle of the array using splice method
+// foodItems.splice(2, 0, "spaghetti", "noodles")
+// console.log(foodItems)
+
+// // to remove from the middle of the array using splice method
+// foodItems.splice(2, 2, "spag", "mjm")
+// console.log(foodItems)
+
+// // object
+
+// const actor = {
+//   name: "Keanu Reeves",
+//   age: 56,
+//   country: "Canada",
+//   networth: "360 million",
+//   movies: ["The Matrix", "John Wick", "Speed", "47 Ronin", "Point Break"],
+
+// }
+// console.log(actor)
+
+// // about me
+
+// const aboutMe = {
+//   name: "Ekezie Uchenna",
+//   age: 90,
+//   country: "Nigeria",
+//   hobbies: ["coding", "reading", "gaming", "watching movies", "listening to music"],
+//   single: true,
+//   job: "Software Developer Intern, GOMYCODE",
+//   networth: "$100 trillion",
+//   institution: "GOMYCODE",
+//   intro: function (){
+//     return `Hello, my name is ${this.name}. i am a boy who has  always been interested in coding and technology. i have a networth of ${this.networth}.
+//     I turned ${this.age} last year`;
+//   }
+// }
+// console.log(aboutMe.intro ())
+
+
+
+
+// // fuction to add to an array
+
+// const foodItems = ["rice", "beans", "yam", "plantain", "garri", "semo", "eba", "amala", "fufu", "pounded yam"];
+// function add () {
+//   const newArr = prompt("enter ur food")
+//   foodItems.push(newArr);
+// }
+// add()
+// console.log(foodItems)
+
+// function remove(){
+//   const newRemove = prompt( "retype ur last push")
+//   if(newRemove === foodItems[foodItems.length -1]){
+//     console.log("Success")
+//   }
+//   else{
+//     console.log("try again")
+//   }
+//   foodItems.pop();
+// }
+// remove()
+//   console.log(foodItems)
+
+
+let i = 0 
+while(i < 200 ){
+  if(i<100){
+    console.log("i am sorry",i)
+  }else{
+    console.log('have u accepted my apologies', i)
   }
+  i++
 }
